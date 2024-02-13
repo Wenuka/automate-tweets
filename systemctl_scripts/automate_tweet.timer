@@ -1,0 +1,11 @@
+# To be placed in /etc/systemd/system/ folder to run the automate_tweet.service once a day
+
+[Unit]
+Description=Run automate_tweet service once a day.
+
+[Timer]
+OnCalendar=00:05
+Persistent=true
+
+[Install]
+WantedBy=timers.target

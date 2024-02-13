@@ -1,0 +1,12 @@
+# To be placed in /etc/systemd/system/ folder to run auto-matically (together with automate_tweet.timer)
+
+[Unit]
+Description=automate_tweet service
+
+[Service]
+WorkingDirectory=/home/<user_name>/
+User=<user_name>
+ExecStart=python3.8 /home/<user_name>/automate-tweets/send_tweet.py
+
+[Install]
+WantedBy=timers.target
